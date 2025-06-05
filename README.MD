@@ -1,19 +1,24 @@
 
-# **SGO - Sistema de Gest„o de OcorrÍncias**
+# **SGO - Sistema de Gest√£o de Ocorr√™ncias**
 
-O **SGO** È um sistema console desenvolvido em **C# com .NET 6**, focado no **monitoramento de ocorrÍncias energÈticas** associadas a possÌveis **ameaÁas cibernÈticas**. A aplicaÁ„o permite que **usu·rios registrem falhas de energia** e gera automaticamente **tickets** para concession·rias.  
-Administradores podem **visualizar todos os chamados** e **gerar relatÛrios em Excel** com os dados dos tickets.
+O **SGO** √© um sistema console desenvolvido em **C# com .NET 6**, focado no **monitoramento de ocorr√™ncias energ√©ticas** associadas a poss√≠veis **amea√ßas cibern√©ticas**. A aplica√ß√£o permite que **usu√°rios registrem falhas de energia** e gera automaticamente **tickets** para concession√°rias.  
+Administradores podem **visualizar todos os chamados** e **gerar relat√≥rios em Excel** com os dados dos tickets.
 
+---
+##  Autor
+
+- **RM97824 - Vinicius Oliveira de Barros**
+- **RM97937 - Pedro Henrique Fernandes L√¥ de Barros**  
 ---
 
 ## **Como Rodar o Projeto**
 
-###  **PrÈ-requisitos**
+###  **Pr√©-requisitos**
 - [.NET SDK 6.0+](https://dotnet.microsoft.com/download/dotnet/6.0)
 - Visual Studio (ou terminal)
-- Conex„o com a internet para instalar pacotes NuGet
+- Conex√£o com a internet para instalar pacotes NuGet
 
-### **Instalar dependÍncia**
+### **Instalar depend√™ncia**
 No terminal do projeto:
 
 ```bash
@@ -31,31 +36,31 @@ dotnet run
 
 ## **Funcionalidades Implementadas**
 
-| Funcionalidade                   | DescriÁ„o                                                           |
+| Funcionalidade                   | Descri√ß√£o                                                           |
 | -------------------------------- | ------------------------------------------------------------------- |
-| `LoginService.Autenticar()`      | AutenticaÁ„o de usu·rios com diferentes perfis (`admin` e `user`)   |
-| `RegistrarOcorrenciaComTicket()` | Registro de ocorrÍncia + geraÁ„o autom·tica de ticket               |
-| `VisualizarRegistros()`          | Permite ao consumidor visualizar apenas seus prÛprios chamados      |
+| `LoginService.Autenticar()`      | Autentica√ß√£o de usu√°rios com diferentes perfis (`admin` e `user`)   |
+| `RegistrarOcorrenciaComTicket()` | Registro de ocorr√™ncia + gera√ß√£o autom√°tica de ticket               |
+| `VisualizarRegistros()`          | Permite ao consumidor visualizar apenas seus pr√≥prios chamados      |
 | `VisualizarTodosChamados()`      | Exclusivo para admin: exibe todos os chamados registrados           |
 | `ExportarTicketsParaExcel()`     | Exporta todos os tickets para uma planilha `.xlsx` com EPPlus       |
-| `ValidaEntradas()`               | ValidaÁ„o de campos obrigatÛrios e tratamento de exceÁıes           |
+| `ValidaEntradas()`               | Valida√ß√£o de campos obrigat√≥rios e tratamento de exce√ß√µes           |
 | `CalculaPrioridade()`            | Define a criticidade do ticket com base em palavras-chave via regex |
-| `Log de eventos`                 | Todas as aÁıes relevantes s„o registradas na lista `Db.Eventos`     |
+| `Log de eventos`                 | Todas as a√ß√µes relevantes s√£o registradas na lista `Db.Eventos`     |
 
 ---
 
 ## **Tecnologias Utilizadas**
 
--  [EPPlus] para geraÁ„o de arquivos Excel
--  ProgramaÁ„o orientada a objetos (POO)
--  Regex para an·lise da descriÁ„o de ocorrÍncias
+-  [EPPlus] para gera√ß√£o de arquivos Excel
+-  Programa√ß√£o orientada a objetos (POO)
+-  Regex para an√°lise da descri√ß√£o de ocorr√™ncias
 -  Log interno com classe `Eventos`
--  GeraÁ„o de relatÛrios autom·ticos na pasta `Relatorios/`
--  Controle de acesso por tipo de usu·rio (`admin` ou `user`)
+-  Gera√ß√£o de relat√≥rios autom√°ticos na pasta `Relatorios/`
+-  Controle de acesso por tipo de usu√°rio (`admin` ou `user`)
 
 ---
 
-##  **Usu·rios PrÈ-cadastrados**
+##  **Usu√°rios Pr√©-cadastrados**
 
 | Email                                     | Senha | Role  |
 | ----------------------------------------- | ----- | ----- |
@@ -64,25 +69,25 @@ dotnet run
 
 ---
 
-##  **RelatÛrios Excel**
+##  **Relat√≥rios Excel**
 
-- A planilha È salva automaticamente na pasta `Relatorios/`, localizada na raiz do projeto.
-- O nome do arquivo segue o padr„o:
+- A planilha √© salva automaticamente na pasta `Relatorios/`, localizada na raiz do projeto.
+- O nome do arquivo segue o padr√£o:
 
 ```
 Tickets_yyyyMMdd_HHmmss.xlsx
 ```
 
-- Cada relatÛrio inclui os seguintes dados:
+- Cada relat√≥rio inclui os seguintes dados:
   - ID do Ticket
-  - ID da OcorrÍncia
+  - ID da Ocorr√™ncia
   - Local
-  - DescriÁ„o
+  - Descri√ß√£o
   - Status
   - Prioridade
   - Data do Ticket
-  - E-mail do Usu·rio que abriu a ocorrÍncia
+  - E-mail do Usu√°rio que abriu a ocorr√™ncia
 
 ---
 
-> Esse projeto simula um sistema de gest„o para concession·rias de energia com base em falhas que podem ter origem em **ataques cibernÈticos**, demonstrando um uso pr·tico de **registro inteligente, alerta autom·tico e geraÁ„o de relatÛrios operacionais.**
+> Esse projeto simula um sistema de gest√£o para concession√°rias de energia com base em falhas que podem ter origem em **ataques cibern√©ticos**, demonstrando um uso pr√°tico de **registro inteligente, alerta autom√°tico e gera√ß√£o de relat√≥rios operacionais.**
