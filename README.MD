@@ -91,3 +91,6 @@ Tickets_yyyyMMdd_HHmmss.xlsx
 ---
 
 > Esse projeto simula um sistema de gestão para concessionárias de energia com base em falhas que podem ter origem em **ataques cibernéticos**, demonstrando um uso prático de **registro inteligente, alerta automático e geração de relatórios operacionais.**
+--
+## Link vídeo do drive
+https://drive.google.com/file/d/1vHmw0dFtBFamEFr4WNFbKtC7m-6pQ0-I/view?usp=sharing
